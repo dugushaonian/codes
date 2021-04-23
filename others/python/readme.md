@@ -17,7 +17,7 @@ python make_nine_pic.py -i 原始图片 -o 输出文件夹
 
 ### 2. 效果
 
-<table border-spacing: 0>
+<table border rules=none cellspacing=0 align=center>
     <tbody>
         <tr>
             <th><img src="./output/1.png" /></th>
