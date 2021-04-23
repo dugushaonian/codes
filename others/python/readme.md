@@ -17,9 +17,22 @@ python make_nine_pic.py -i 原始图片 -o 输出文件夹
 
 ### 2. 效果
 
-| | | |
-|--|--|--|
-|![1](./output/1.png)|![2](./output/2.png)|![3](./output/3.png)|
-|![4](./output/4.png)|![5](./output/5.png)|![6](./output/6.png)|
-|![7](./output/7.png)|![8](./output/8.png)|![9](./output/9.png)|
-
+<table>
+    <tbody>
+        <tr>
+            <th>![1](./output/1.png)</th>
+            <th>![2](./output/2.png)</th>
+            <th>![3](./output/3.png)</th>
+        </tr>
+        <tr>
+            <th>![4](./output/4.png)</th>
+            <th>![5](./output/5.png)</th>
+            <th>![6](./output/6.png)</th>
+        </tr>
+        <tr>
+            <th>![7](./output/7.png)</th>
+            <th>![8](./output/8.png)</th>
+            <th>![9](./output/9.png)</th>
+        </tr>
+    </tbody>
+</table>
