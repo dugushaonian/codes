@@ -17,7 +17,7 @@ python make_nine_pic.py -i 原始图片 -o 输出文件夹
 
 ### 2. 效果
 
-<table cellspacing="0">
+<table border="0">
     <tbody>
         <tr>
             <th><img src="./output/1.png" /></th>
