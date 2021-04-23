@@ -12,10 +12,10 @@ python make_nine_pic.py -i 原始图片 -o 输出文件夹
 
 ## 3. 效果预览
 
-### 1. 原图
+### 3.1. 原图
 ![原图](./input/dugufei.jpg)
 
-### 2. 效果
+### 3.2. 效果
 
 <table border rules=none cellspacing=0 align=center>
     <tbody>
