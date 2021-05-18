@@ -1,3 +1,10 @@
+/*
+ * @Author: dugufei (dugufei@bjtu.edu.cn)
+ * @Date:   2021-05-18 20:33:20
+ * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
+ * @Last Modified time: 2021-05-18 20:34:18
+ */
+
 #include <iostream>
 
 struct ListNode {
@@ -54,4 +61,3 @@ int main() {
     std::cout << std::endl;
     return 0;
 }
-
