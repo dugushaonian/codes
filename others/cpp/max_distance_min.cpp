@@ -2,7 +2,7 @@
  * @Author: dugufei (dugufei@bjtu.edu.cn)
  * @Date:   2021-05-19 20:38:06
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2021-05-19 21:41:25
+ * @Last Modified time: 2021-05-19 22:43:32
  */
 
 #include <iostream>
@@ -13,7 +13,7 @@
 
 // 实现的思路可以转换为: 有 n 个点, 往 n 个点中间插入 k 个点新的点, 使得相邻的两个点之间的最大距离最小，求这个最小的距离。
 int solution(const std::vector<int>& n_point, int k) {
-    if (n_point.size() == 0 || n_point.size() == 1) {
+    if (n_point.size() == 0 or n_point.size() == 1) {
         return 0;
     }
     if (n_point.size() + k > *(--n_point.end()) - *n_point.begin() + 1) {

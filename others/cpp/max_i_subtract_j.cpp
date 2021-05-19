@@ -2,7 +2,7 @@
  * @Author: dugufei (dugufei@bjtu.edu.cn)
  * @Date:   2021-05-19 21:42:54
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2021-05-19 22:21:09
+ * @Last Modified time: 2021-05-19 22:43:52
  */
 
 #include <iostream>
@@ -13,7 +13,7 @@
 
 int solution(const std::vector<int32_t>& nums) {
     int32_t res = INT32_MIN;
-    if (nums.size() == 0 || nums.size() == 1) {
+    if (nums.size() == 0 or nums.size() == 1) {
         return res;
     }
     int32_t minnum = nums[0]; 
