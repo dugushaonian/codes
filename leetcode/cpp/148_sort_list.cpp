@@ -2,7 +2,7 @@
  * @Author: dugufei (dugufei@bjtu.edu.cn)
  * @Date:   2022-02-06 19:41:00
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2022-02-06 19:48:33
+ * @Last Modified time: 2022-02-06 19:54:10
  */
 
 #include <iostream>
@@ -37,7 +37,7 @@ public:
         return mergeTowList(l1, l2);
     }
 
-    ListNode* mergeTowList(ListNode* l1, ListNode* l2) {
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         ListNode temp(-1);
         for (ListNode* p = &temp; l1 || l2; p = p->next) {
             int val1 = l1 ? l1->val : INT_MAX;
