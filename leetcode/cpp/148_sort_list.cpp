@@ -2,7 +2,7 @@
  * @Author: dugufei (dugufei@bjtu.edu.cn)
  * @Date:   2022-02-06 19:41:00
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2022-02-06 19:54:10
+ * @Last Modified time: 2022-02-06 19:54:32
  */
 
 #include <iostream>
@@ -34,7 +34,7 @@ public:
         fast->next = nullptr;
         ListNode* l1 = sortList(head);
         ListNode* l2 = sortList(slow);
-        return mergeTowList(l1, l2);
+        return mergeTwoLists(l1, l2);
     }
 
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
