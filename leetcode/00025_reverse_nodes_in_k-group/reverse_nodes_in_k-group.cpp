@@ -2,10 +2,11 @@
  * @Author:             dugufei (dugufei@bjtu.edu.cn)
  * @Date:               2022-04-04 21:01:30
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2022-04-04 22:53:00
+ * @Last Modified time: 2024-03-04 23:01:06
  */
 
 #include <iostream>
+#include <vector>
 
  //* Definition for singly-linked list.
 struct ListNode {
@@ -15,7 +16,31 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
- 
+
+// 准备工作
+ListNode* build_list(const std::vector<int>& vals) {
+    int size = vals.size();
+    if (size == 0) {
+        return nullptr;
+    }
+    ListNode* root = new ListNode(vals[size - 1], nullptr);
+    for (int i = size - 2; i >= 0; --i) {
+        ListNode* node = new ListNode(vals[i], root);
+        root = node;
+    }
+    return root;
+}
+
+void print_list(ListNode* root) {
+    ListNode* p = root;
+    while (p) {
+        std::cout << p->val << " ";
+        p = p->next;
+    }
+    std::cout << std::endl;
+}
+
+// 正解
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
@@ -50,18 +75,19 @@ public:
 };
 
 int main() {
-    ListNode five(5);
-    ListNode four(4, &five);
-    ListNode three(3, &four);
-    ListNode two(2, &three);
-    ListNode one(1, &two);
-
+    // 构建链表
+    ListNode* root = build_list({1, 2, 3, 4, 5});
+    print_list(root);
     Solution solution;
-    ListNode * ans = solution.reverseKGroup(&one, 2);
-    while (ans) {
-        std::cout << ans->val << std::endl;
-        ans = ans->next;
-    }
+    // 示例 1
+    ListNode * ans = solution.reverseKGroup(root, 2);
+    print_list(ans);
+    
+    // 示例 2
+    root = build_list({1, 2, 3, 4, 5});
+    ans = solution.reverseKGroup(root, 3);
+    print_list(ans);
+
     return 0;
 }
 
