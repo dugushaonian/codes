@@ -12,7 +12,7 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 
 示例 1：
 
-<img src="./01.png#pic_center" alt="图片替换文本" width="450" height="200"/>
+<img src="./01.png#pic_center" alt="示例1" width="300" height="120"/>
 
 ```
 输入：head = [1,2,3,4,5], k = 2
@@ -21,7 +21,7 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 
 示例 2：
 
-<img src="./02.png#pic_center" alt="图片替换文本" width="450" height="200"/>
+<img src="./02.png#pic_center" alt="示例2" width="300" height="120"/>
 
 ```
 输入：head = [1,2,3,4,5], k = 3
@@ -43,6 +43,13 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 ---
 
 ## 题解
+
+这道题，思路很清晰，就是直接根据题意 k 个一组进行反转即可。如下图 k = 2 时：先找到第一组 node 1 和 node 2，然后进行反转；再找到第二组 node 3 和 node 4，然后进行反转；最后 node 5 不够 k，单独一组。
+
+<img src="./03.png" align='middle' alt="题解" width="450" height="200"/>
+
+思路很简单，然而，这是一道困难题，短时间内实现起来还是有很多细节很难考虑全的。
+
 
 ``` c++
 class Solution {
