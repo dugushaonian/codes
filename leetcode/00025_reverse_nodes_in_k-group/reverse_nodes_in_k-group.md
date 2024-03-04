@@ -1,7 +1,5 @@
 # 25. K 个一组反转链表
 
-@[toc]
-
 ## 题目描述
 
 [LeetCode](https://leetcode.cn/problems/reverse-nodes-in-k-group/) 第 25 题
