@@ -2,7 +2,7 @@
  * @Author:             dugufei (dugufei@bjtu.edu.cn)
  * @Date:               2022-04-04 21:01:30
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2024-03-04 23:06:54
+ * @Last Modified time: 2024-03-04 23:15:09
  */
 
 #include <iostream>
@@ -34,12 +34,17 @@ ListNode* build_list(const std::vector<int>& vals) {
 
 // 打印单链表助手
 void print_list(ListNode* root) {
+    if (!root) {
+        std::cout << "list is null!" << std::endl;
+        return;
+    }
     ListNode* p = root;
     while (p) {
         std::cout << p->val << " ";
         p = p->next;
     }
     std::cout << std::endl;
+    return;
 }
 
 // 正解
@@ -93,3 +98,4 @@ int main() {
     return 0;
 }
 
+// g++-13 reverse_nodes_in_k-group.cpp --std=c++17
