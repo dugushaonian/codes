@@ -2,7 +2,7 @@
  * @Author:             dugufei (dugufei@bjtu.edu.cn)
  * @Date:               2022-04-04 21:01:30
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2024-03-04 23:15:09
+ * @Last Modified time: 2024-03-04 23:21:42
  */
 
 #include <iostream>
@@ -50,6 +50,17 @@ void print_list(ListNode* root) {
 // 正解
 class Solution {
 public:
+    std::pair<ListNode*, ListNode*> reverse(ListNode* head, ListNode* tail) {
+        ListNode* p = head;
+        while (p != tail) {
+            ListNode* next = p->next;
+            p->next = tail->next;
+            tail->next = p;
+            p = next;
+        }
+        return {tail, head};
+    }
+
     ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode dummy(0, head);
         ListNode* pre = &dummy;
@@ -67,17 +78,6 @@ public:
             head = pre->next;
         }
         return dummy.next;
-    }
-
-    std::pair<ListNode*, ListNode*> reverse(ListNode* head, ListNode* tail) {
-        ListNode* p = head;
-        while (p != tail) {
-            ListNode* next = p->next;
-            p->next = tail->next;
-            tail->next = p;
-            p = next;
-        }
-        return {tail, head};
     }
 };
 
