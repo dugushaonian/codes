@@ -43,3 +43,38 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 ---
 
 ## 题解
+
+``` c++
+class Solution {
+public:
+    ListNode* reverseKGroup(ListNode* head, int k) {
+        ListNode dummy(0, head);
+        ListNode* pre = &dummy;
+        while (head) {
+            ListNode* tail = pre;
+            for (int i = 0; i < k; ++i) {
+                tail = tail->next;
+                if (!tail){
+                    return dummy.next;
+                }
+            }
+            std::tie(head, tail) = reverse(head, tail);
+            pre->next = head;
+            pre = tail;
+            head = pre->next;
+        }
+        return dummy.next;
+    }
+
+    std::pair<ListNode*, ListNode*> reverse(ListNode* head, ListNode* tail) {
+        ListNode* p = head;
+        while (p != tail) {
+            ListNode* next = p->next;
+            p->next = tail->next;
+            tail->next = p;
+            p = next;
+        }
+        return {tail, head};
+    }
+};
+```
