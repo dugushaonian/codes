@@ -56,6 +56,8 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
 3. 将 2 返回的一个组在链接到链表中。
 4. 循环执行 1、2 和 3，直到链表循环一遍。
 
+[完整代码](./reverse_nodes_in_k-group.cpp)
+
 ``` c++
 class Solution {
 public:
@@ -96,14 +98,12 @@ public:
             pre->next = head;
             pre = tail;
             head = pre->next;
-            // 如果 head 不为空时继续下一组循环
+            // 如果 head 不为空时，继续下一组循环
         }
         return dummy.next;
     }
 };
 ```
-
-[完整代码](./reverse_nodes_in_k-group.cpp)
 
 ## 复杂度分析
 
