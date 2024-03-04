@@ -2,13 +2,14 @@
  * @Author:             dugufei (dugufei@bjtu.edu.cn)
  * @Date:               2022-04-04 21:01:30
  * @Last Modified by:   dugufei (dugufei@bjtu.edu.cn)
- * @Last Modified time: 2024-03-04 23:01:06
+ * @Last Modified time: 2024-03-04 23:06:54
  */
 
 #include <iostream>
 #include <vector>
 
- //* Definition for singly-linked list.
+// 准备工作
+// 定义单链表节点.
 struct ListNode {
     int val;
     ListNode *next;
@@ -17,7 +18,7 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-// 准备工作
+// 构建单链表助手
 ListNode* build_list(const std::vector<int>& vals) {
     int size = vals.size();
     if (size == 0) {
@@ -31,6 +32,7 @@ ListNode* build_list(const std::vector<int>& vals) {
     return root;
 }
 
+// 打印单链表助手
 void print_list(ListNode* root) {
     ListNode* p = root;
     while (p) {
@@ -74,12 +76,12 @@ public:
     }
 };
 
+// 万物开端----难
 int main() {
-    // 构建链表
-    ListNode* root = build_list({1, 2, 3, 4, 5});
-    print_list(root);
     Solution solution;
+
     // 示例 1
+    ListNode* root = build_list({1, 2, 3, 4, 5});
     ListNode * ans = solution.reverseKGroup(root, 2);
     print_list(ans);
     
